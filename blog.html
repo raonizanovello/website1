@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Base Level Strength</title>
+  <meta name="description" content="Training insights, programming notes, and honest takes on strength and performance from Ronnie at Base Level Strength.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #F7F5F0;
+      --surface: #FFFFFF;
+      --text: #2D2D2D;
+      --text-sec: #6B6B6B;
+      --text-muted: #9A9A9A;
+      --sage-100: #e6ece0;
+      --sage-600: #4a6a3b;
+      --sage-700: #3b5430;
+      --sage-800: #314429;
+      --sage-300: #a8bf9a;
+      --sand-50: #faf8f4;
+      --border: #E5E0D8;
+      --serif: 'Cormorant Garant', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+      --max-w: 1080px;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      background: rgba(247,245,240,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14px; font-weight: 400; color: var(--text-sec); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-cta {
+      background: var(--sage-700) !important;
+      color: #fff !important;
+      padding: 8px 20px !important;
+      border-radius: 8px;
+      font-weight: 500 !important;
+    }
+    .nav-cta:hover { background: var(--sage-800) !important; }
+
+    .page-header {
+      padding: 140px 24px 64px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sage-600);
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5.5vw, 60px);
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 em { font-style: italic; color: var(--sage-600); }
+
+    .page-header p {
+      font-size: 16px;
+      color: var(--text-sec);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .blog-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 56px 24px 100px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .post-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    }
+
+    .post-card.featured {
+      grid-column: 1 / -1;
+      padding: 40px;
+    }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--sage-600);
+      background: var(--sage-100);
+      padding: 3px 9px;
+      border-radius: 5px;
+      margin-bottom: 14px;
+    }
+
+    .post-card h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.2px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .post-card.featured h2 { font-size: 34px; max-width: 12ch; }
+
+    .post-card h2 a:hover { color: var(--sage-700); }
+
+    .post-card p {
+      font-size: 14px;
+      color: var(--text-sec);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 58ch;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .post-meta span + span::before {
+      content: '·';
+      margin-right: 12px;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sage-600);
+      margin-top: 16px;
+      transition: gap 0.2s;
+    }
+
+    .read-more:hover { gap: 10px; }
+
+    .empty-post {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+    }
+
+    .empty-post h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .empty-post p {
+      font-size: 14px;
+      color: var(--text-sec);
+      line-height: 1.7;
+    }
+
+    .newsletter {
+      background: var(--sage-800);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .newsletter-inner { max-width: 540px; margin: 0 auto; }
+
+    .newsletter .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sage-300);
+      margin-bottom: 12px;
+    }
+
+    .newsletter h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .newsletter .sub {
+      font-size: 15px;
+      color: rgba(168,191,154,0.8);
+      line-height: 1.6;
+      max-width: 40ch;
+      margin: 0 auto;
+    }
+
+    footer { padding: 40px 24px; border-top: 1px solid var(--border); }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 20px; max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .post-card.featured { padding: 28px 26px; }
+      .post-card.featured h2 { font-size: 28px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Base Level Strength</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#philosophy">Philosophy</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="https://www.instagram.com/strength.v6/" target="_blank" class="nav-cta">Let's talk</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="page-label">From the coach</p>
+  <h1>Training insights,<br><em>written honestly.</em></h1>
+  <p>Programming notes, performance thinking, and what I'm learning in the trenches — both coaching and competing. San Francisco &amp; Sacramento County.</p>
+</div>
+
+<div class="blog-section">
+  <div class="blog-grid">
+
+    <article class="post-card featured">
+      <span class="post-tag">Programming</span>
+      <h2><a href="beginners-too-much-too-soon.html">Why most beginners are doing too much, too soon</a></h2>
+      <p>More volume isn't the answer when you haven't built the capacity to absorb it. This piece is about why restraint is often the fastest way to make strength training stick.</p>
+      <div class="post-meta">
+        <span>Ronnie</span>
+        <span>April 2026</span>
+        <span>5 min read</span>
+      </div>
+      <a href="beginners-too-much-too-soon.html" class="read-more">Read article →</a>
+    </article>
+
+    <article class="post-card">
+      <span class="post-tag">Powerlifting</span>
+      <h2><a href="powerlifting-prep-and-coaching.html">What powerlifting prep actually teaches you about coaching</a></h2>
+      <p>Being in prep forces honesty. You feel what accumulated fatigue really costs, and that changes how you write programs for other people.</p>
+      <div class="post-meta">
+        <span>Ronnie</span>
+        <span>March 2026</span>
+        <span>4 min read</span>
+      </div>
+      <a href="powerlifting-prep-and-coaching.html" class="read-more">Read article →</a>
+    </article>
+
+    <article class="post-card">
+      <span class="post-tag">High Performance</span>
+      <h2><a href="training-for-busy-professionals.html">Training for busy professionals: what actually matters</a></h2>
+      <p>Three sessions a week, done with intent, can outperform a more ambitious plan you cannot sustain. The goal is not fantasy discipline. It is repeatability.</p>
+      <div class="post-meta">
+        <span>Ronnie</span>
+        <span>February 2026</span>
+        <span>6 min read</span>
+      </div>
+      <a href="training-for-busy-professionals.html" class="read-more">Read article →</a>
+    </article>
+
+    <div class="empty-post">
+      <h2>What this blog is for</h2>
+      <p>This is where I put the longer thoughts that do not fit in an Instagram caption: programming decisions, coaching principles, and what competing keeps teaching me.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <p class="label">Stay sharp</p>
+    <h2>More writing is on the way.</h2>
+    <p class="sub">For now, the best place to keep up is Instagram or email. I would rather post less and mean it than fill this page with noise.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">Base Level Strength</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="https://www.instagram.com/strength.v6/" target="_blank">Instagram</a>
+      <a href="mailto:hello@baselevelstrength.org">Email</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Base Level Strength. San Francisco &amp; Sacramento County.</p>
+</footer>
+
+</body>
+</html>

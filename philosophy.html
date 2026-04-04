@@ -82,11 +82,8 @@
     }
 
     .intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.82fr);
-      gap: 42px;
-      align-items: center;
-      margin-bottom: 44px;
+      max-width: 760px;
+      margin-bottom: 40px;
     }
 
     h1 {
@@ -103,40 +100,6 @@
       color: var(--text-sec);
       max-width: 38ch;
       margin-bottom: 0;
-    }
-
-    .quote {
-      background: linear-gradient(180deg, rgba(74, 106, 59, 0.08), rgba(74, 106, 59, 0.04));
-      color: var(--sage-800);
-      border-radius: 22px;
-      padding: 24px 26px 26px;
-      border: 1px solid rgba(55, 60, 43, 0.1);
-      position: relative;
-      overflow: hidden;
-      min-height: auto;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .quote::before {
-      content: '"';
-      position: absolute;
-      top: 8px;
-      left: 20px;
-      font-family: var(--serif);
-      font-size: 48px;
-      line-height: 1;
-      color: rgba(59, 84, 48, 0.16);
-    }
-
-    .quote p {
-      position: relative;
-      z-index: 1;
-      font-family: var(--serif);
-      font-size: 21px;
-      line-height: 1.5;
-      font-style: italic;
-      max-width: 17ch;
     }
 
     .body {
@@ -199,9 +162,7 @@
 
     @media (max-width: 720px) {
       .page-shell { padding-top: 56px; }
-      .intro,
       .body { grid-template-columns: 1fr; }
-      .quote p { font-size: 20px; }
       .cta h2 { font-size: 24px; }
     }
   </style>
@@ -221,10 +182,6 @@
         <h1>We exist as movement. Everything else follows.</h1>
         <p class="deck">Training is not decoration. It is the process of giving the body a level of demand honest enough to change it.</p>
       </div>
-
-      <section class="quote">
-        <p>Movement is not how we get to the rest of life. It is the reason the rest of life is possible.</p>
-      </section>
     </div>
 
     <section class="body">

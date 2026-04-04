@@ -25,7 +25,7 @@
       --border: #E5E0D8;
       --serif: 'Cormorant Garamond', Georgia, serif;
       --sans: 'Outfit', system-ui, sans-serif;
-      --max-w: 900px;
+      --max-w: 1120px;
       --radius: 14px;
     }
 
@@ -69,10 +69,7 @@
     .nav-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; }
     .nav-link { font-size: 15px; color: var(--text-sec); }
 
-    .page-shell {
-      padding-top: 76px;
-      padding-bottom: 96px;
-    }
+    .page-shell { padding-top: 76px; padding-bottom: 96px; }
 
     .eyebrow {
       display: inline-block;
@@ -82,6 +79,14 @@
       text-transform: uppercase;
       color: var(--sage-600);
       margin-bottom: 14px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 44px;
     }
 
     h1 {
@@ -97,17 +102,19 @@
       font-size: 18px;
       color: var(--text-sec);
       max-width: 38ch;
-      margin-bottom: 44px;
+      margin-bottom: 0;
     }
 
     .quote {
       background: var(--sage-800);
       color: #fff;
       border-radius: var(--radius);
-      padding: 32px;
-      margin-bottom: 36px;
+      padding: 34px;
       position: relative;
       overflow: hidden;
+      min-height: 100%;
+      display: flex;
+      align-items: end;
     }
 
     .quote::before {
@@ -128,18 +135,19 @@
       font-size: 30px;
       line-height: 1.35;
       font-style: italic;
-      max-width: 20ch;
+      max-width: 18ch;
     }
 
     .body {
       display: grid;
-      gap: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 32px;
     }
 
     .body p {
       font-size: 16px;
       color: var(--text-sec);
-      max-width: 64ch;
+      max-width: 34ch;
     }
 
     .cta {
@@ -189,6 +197,8 @@
 
     @media (max-width: 720px) {
       .page-shell { padding-top: 56px; }
+      .intro,
+      .body { grid-template-columns: 1fr; }
       .quote p { font-size: 24px; }
       .cta h2 { font-size: 28px; }
     }
@@ -203,13 +213,17 @@
   </nav>
 
   <main class="page-shell">
-    <p class="eyebrow">Philosophy</p>
-    <h1>We exist as movement. Everything else follows.</h1>
-    <p class="deck">Training is not decoration. It is the process of giving the body a level of demand honest enough to change it.</p>
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Philosophy</p>
+        <h1>We exist as movement. Everything else follows.</h1>
+        <p class="deck">Training is not decoration. It is the process of giving the body a level of demand honest enough to change it.</p>
+      </div>
 
-    <section class="quote">
-      <p>Movement is not how we get to the rest of life. It is the reason the rest of life is possible.</p>
-    </section>
+      <section class="quote">
+        <p>Movement is not how we get to the rest of life. It is the reason the rest of life is possible.</p>
+      </section>
+    </div>
 
     <section class="body">
       <p>Your mind and your body are in constant negotiation — and they want fundamentally different things. The mind gravitates toward comfort, toward certainty, toward reasons to stop. The body operates on older, more honest logic. It doesn't respond to intention or understanding. It responds to demand.</p>

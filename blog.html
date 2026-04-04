@@ -103,7 +103,7 @@
     .page-header p {
       font-size: 16px;
       color: var(--text-sec);
-      max-width: 520px;
+      max-width: 560px;
       line-height: 1.7;
     }
 
@@ -132,9 +132,13 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.06);
     }
 
-    .post-card.featured {
-      grid-column: 1 / -1;
-      padding: 40px;
+    .post-card.featured { grid-column: 1 / -1; padding: 40px; }
+
+    .featured-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 32px;
+      align-items: end;
     }
 
     .post-tag {
@@ -160,7 +164,7 @@
       color: var(--text);
     }
 
-    .post-card.featured h2 { font-size: 34px; max-width: 12ch; }
+    .post-card.featured h2 { font-size: 42px; max-width: 14ch; margin-bottom: 0; }
     .post-card h2 a:hover { color: var(--sage-700); }
 
     .post-card p {
@@ -170,6 +174,8 @@
       margin-bottom: 20px;
       max-width: 58ch;
     }
+
+    .featured-copy p { margin-bottom: 18px; }
 
     .post-meta {
       display: flex;
@@ -274,7 +280,8 @@
     @media (max-width: 768px) {
       .blog-grid { grid-template-columns: 1fr; }
       .post-card.featured { padding: 28px 26px; }
-      .post-card.featured h2 { font-size: 28px; }
+      .featured-layout { grid-template-columns: 1fr; gap: 18px; }
+      .post-card.featured h2 { font-size: 32px; max-width: 11ch; }
       .nav-links a:not(.nav-cta) { display: none; }
     }
   </style>
@@ -286,7 +293,7 @@
     <a href="index.html" class="nav-brand">Base Level Strength</a>
     <div class="nav-links">
       <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
+      <a href="index.html#working">Working Together</a>
       <a href="philosophy.html">Philosophy</a>
       <a href="blog.html" class="active">Blog</a>
       <a href="mailto:hello@baselevelstrength.org?subject=Schedule%20a%20call" class="nav-cta">Schedule a call</a>
@@ -303,15 +310,21 @@
 <div class="blog-section">
   <div class="blog-grid">
     <article class="post-card featured">
-      <span class="post-tag">Programming</span>
-      <h2><a href="beginners-too-much-too-soon.html">Why most beginners are doing too much, too soon</a></h2>
-      <p>More volume isn't the answer when you haven't built the capacity to absorb it. This piece is about why restraint is often the fastest way to make strength training stick.</p>
-      <div class="post-meta">
-        <span>Ronnie</span>
-        <span>April 2026</span>
-        <span>5 min read</span>
+      <div class="featured-layout">
+        <div>
+          <span class="post-tag">Programming</span>
+          <h2><a href="beginners-too-much-too-soon.html">Why most beginners are doing too much, too soon</a></h2>
+        </div>
+        <div class="featured-copy">
+          <p>More volume isn't the answer when you haven't built the capacity to absorb it. This piece is about why restraint is often the fastest way to make strength training stick.</p>
+          <div class="post-meta">
+            <span>Ronnie</span>
+            <span>April 2026</span>
+            <span>5 min read</span>
+          </div>
+          <a href="beginners-too-much-too-soon.html" class="read-more">Read article →</a>
+        </div>
       </div>
-      <a href="beginners-too-much-too-soon.html" class="read-more">Read article →</a>
     </article>
 
     <article class="post-card">

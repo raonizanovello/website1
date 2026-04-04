@@ -83,19 +83,19 @@
 
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-      gap: 36px;
-      align-items: end;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.82fr);
+      gap: 42px;
+      align-items: center;
       margin-bottom: 44px;
     }
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.8px;
+      font-size: clamp(34px, 4.8vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -0.5px;
       margin-bottom: 18px;
-      max-width: 12ch;
+      max-width: 13ch;
     }
 
     .deck {
@@ -106,36 +106,37 @@
     }
 
     .quote {
-      background: var(--sage-800);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 34px;
+      background: linear-gradient(180deg, rgba(74, 106, 59, 0.08), rgba(74, 106, 59, 0.04));
+      color: var(--sage-800);
+      border-radius: 22px;
+      padding: 24px 26px 26px;
+      border: 1px solid rgba(55, 60, 43, 0.1);
       position: relative;
       overflow: hidden;
-      min-height: 100%;
+      min-height: auto;
       display: flex;
-      align-items: end;
+      align-items: flex-start;
     }
 
     .quote::before {
       content: '"';
       position: absolute;
-      top: 6px;
-      left: 18px;
+      top: 8px;
+      left: 20px;
       font-family: var(--serif);
-      font-size: 92px;
+      font-size: 48px;
       line-height: 1;
-      color: rgba(255,255,255,0.12);
+      color: rgba(59, 84, 48, 0.16);
     }
 
     .quote p {
       position: relative;
       z-index: 1;
       font-family: var(--serif);
-      font-size: 30px;
-      line-height: 1.35;
+      font-size: 21px;
+      line-height: 1.5;
       font-style: italic;
-      max-width: 18ch;
+      max-width: 17ch;
     }
 
     .body {
@@ -152,27 +153,28 @@
 
     .cta {
       margin-top: 52px;
-      padding: 28px;
+      padding: 24px 26px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 18px;
       background: var(--surface);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      gap: 18px;
+      justify-content: flex-start;
+      gap: 16px 24px;
     }
 
     .cta h2 {
       font-family: var(--serif);
-      font-size: 34px;
-      line-height: 1.05;
-      margin-bottom: 8px;
+      font-size: 26px;
+      line-height: 1.08;
+      margin-bottom: 6px;
     }
 
     .cta p {
       color: var(--text-sec);
-      max-width: 44ch;
+      max-width: 38ch;
+      font-size: 15px;
     }
 
     .cta a {
@@ -199,8 +201,8 @@
       .page-shell { padding-top: 56px; }
       .intro,
       .body { grid-template-columns: 1fr; }
-      .quote p { font-size: 24px; }
-      .cta h2 { font-size: 28px; }
+      .quote p { font-size: 20px; }
+      .cta h2 { font-size: 24px; }
     }
   </style>
 </head>

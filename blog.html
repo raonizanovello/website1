@@ -16,9 +16,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog — Base Level Strength">
   <meta name="twitter:description" content="Training insights, programming notes, and honest takes on strength and performance.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- GA4 – item 24: replace G-XXXXXXXXXX after setup at analytics.google.com -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
+  <!-- Non-blocking font loading – item 29 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -462,8 +471,10 @@
     <span class="footer-brand">Base Level Strength</span>
     <div class="footer-links">
       <a href="index.html">Home</a>
-      <a href="https://www.instagram.com/strength.v6/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/strength.v6/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="mailto:hello@baselevelstrength.org">Email</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
     </div>
   </div>
   <p class="footer-copy">© 2026 Base Level Strength. San Francisco &amp; Sacramento County.</p>

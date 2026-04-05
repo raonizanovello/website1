@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /Mara/
+
+# REPLACE: update domain below
+Sitemap: https://baselevelstrength.org/sitemap.xml

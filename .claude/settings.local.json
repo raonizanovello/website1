@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn \"alt=\" *.html)",
+      "Bash(grep -rn \"favicon\\\\|<link rel=\\\\\"icon\\\\\"\\\\|<link rel='icon'\" *.html)",
+      "Bash(grep -rn \"analytics\\\\|gtag\\\\|GA-\\\\|G-\\\\|UA-\" *.html)",
+      "Bash(grep -rn \"instagram\\\\|twitter\\\\|linkedin\\\\|social\" *.html)",
+      "Bash(grep -rn \"favicon\" *.html)",
+      "Bash(grep -rn \"gtag\\\\|G-\\\\|UA-\\\\|analytics\" *.html)",
+      "Bash(grep -rn \"instagram\\\\|twitter\\\\.com\\\\|linkedin\\\\.com\" *.html)"
+    ]
+  }
+}

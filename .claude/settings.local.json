@@ -7,7 +7,8 @@
       "Bash(grep -rn \"instagram\\\\|twitter\\\\|linkedin\\\\|social\" *.html)",
       "Bash(grep -rn \"favicon\" *.html)",
       "Bash(grep -rn \"gtag\\\\|G-\\\\|UA-\\\\|analytics\" *.html)",
-      "Bash(grep -rn \"instagram\\\\|twitter\\\\.com\\\\|linkedin\\\\.com\" *.html)"
+      "Bash(grep -rn \"instagram\\\\|twitter\\\\.com\\\\|linkedin\\\\.com\" *.html)",
+      "Bash(python3 -)"
     ]
   }
 }

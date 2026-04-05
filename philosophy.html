@@ -7,7 +7,7 @@
   <meta name="description" content="The training philosophy behind Base Level Strength: movement first, intelligent demand, and sustainable performance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,6 +18,7 @@
       --text-sec: #6B6B6B;
       --text-muted: #9A9A9A;
       --sage-100: #e6ece0;
+      --sage-200: #d8e2cf;
       --sage-300: #a8bf9a;
       --sage-600: #4a6a3b;
       --sage-700: #3b5430;
@@ -48,18 +49,10 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-inner,
-    .page-shell,
-    footer {
+    .nav-inner {
       max-width: var(--max-w);
       margin: 0 auto;
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-
-    .nav-inner {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -67,9 +60,21 @@
     }
 
     .nav-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; }
-    .nav-link { font-size: 15px; color: var(--text-sec); }
 
-    .page-shell { padding-top: 76px; padding-bottom: 96px; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-link { font-size: 15px; color: var(--text-sec); transition: color 160ms ease; }
+    .nav-link:hover { color: var(--text); }
+
+    .page-shell {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 76px 24px 96px;
+    }
 
     .eyebrow {
       display: inline-block;
@@ -99,13 +104,14 @@
       font-size: 18px;
       color: var(--text-sec);
       max-width: 38ch;
-      margin-bottom: 0;
     }
 
+    /* Body text */
     .body {
       max-width: 760px;
       display: grid;
       gap: 18px;
+      margin-bottom: 40px;
     }
 
     .body p {
@@ -114,8 +120,127 @@
       max-width: 56ch;
     }
 
+    /* In practice callout */
+    .in-practice {
+      max-width: 760px;
+      margin-bottom: 52px;
+      padding: 28px 26px;
+      border-radius: 16px;
+      background: var(--sage-100);
+    }
+
+    .in-practice .practice-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--sage-600);
+      margin-bottom: 16px;
+    }
+
+    .in-practice p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-sec);
+      max-width: 56ch;
+      margin-bottom: 14px;
+    }
+
+    .in-practice p:last-child { margin-bottom: 0; }
+
+    /* Continue section — links out of the page */
+    .continue-section {
+      max-width: 760px;
+      margin-bottom: 52px;
+    }
+
+    .continue-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--sage-600);
+      margin-bottom: 20px;
+    }
+
+    .continue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .continue-card {
+      padding: 22px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .continue-card-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .continue-card h3 {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.16;
+      margin-bottom: 8px;
+    }
+
+    .continue-card p {
+      font-size: 14px;
+      color: var(--text-sec);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .continue-card-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--sage-600);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 180ms ease;
+    }
+
+    .continue-card-link:hover { gap: 9px; }
+
+    .blog-post-links {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .blog-post-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--sage-700);
+      line-height: 1.35;
+    }
+
+    .blog-post-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* CTA */
     .cta {
-      margin-top: 52px;
+      max-width: 760px;
       padding: 24px 26px;
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -140,7 +265,8 @@
       font-size: 15px;
     }
 
-    .cta a {
+    /* REPLACE: update data-cal-link to your actual Cal.com username/event-slug */
+    .cta-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -150,11 +276,19 @@
       color: #fff;
       font-weight: 500;
       white-space: nowrap;
+      font-family: var(--sans);
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      transition: background 160ms ease;
     }
 
+    .cta-btn:hover { background: var(--sage-800); }
+
     footer {
-      padding-top: 28px;
-      padding-bottom: 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 28px 24px 40px;
       border-top: 1px solid var(--border);
       font-size: 13px;
       color: var(--text-muted);
@@ -163,6 +297,7 @@
     @media (max-width: 720px) {
       .page-shell { padding-top: 56px; }
       .cta h2 { font-size: 24px; }
+      .continue-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -170,22 +305,66 @@
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-brand">Base Level Strength</a>
-      <a href="index.html" class="nav-link">Back to home</a>
+      <div class="nav-right">
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="index.html" class="nav-link">← Home</a>
+      </div>
     </div>
   </nav>
 
   <main class="page-shell">
     <div class="intro">
-      <div>
-        <p class="eyebrow">Philosophy</p>
-        <h1>We exist as movement. Everything else follows.</h1>
-      </div>
+      <p class="eyebrow">Philosophy</p>
+      <h1>We exist as movement. Everything else follows.</h1>
     </div>
 
     <section class="body">
       <p>The mind wants comfort. The body answers demand. Training works when the body has a real reason to adapt.</p>
       <p>We were built to move. Strength is not an abstract idea or a motivational exercise. It is a physical response to consistent, honest work.</p>
+      <p>Assessment is where the work starts — not the planning stage after the conversation is over. What someone needs and what they think they need are often different. The screen tells the truth. The plan follows from that, not from what sounds good in a first call.</p>
+      <p>Every program is written against one question: what does this person need to be able to do six months from now, and what is the most honest path from here to there? That question has nothing to do with how impressive the plan looks on paper.</p>
       <p>That is how I coach: assess clearly, train with intent, and build capacity that carries into the rest of life.</p>
+    </section>
+
+    <section class="in-practice" aria-label="Philosophy in practice">
+      <span class="practice-label">In practice</span>
+      <p>A client came in wanting to get more athletic before their first obstacle course race. Three months out. They expected conditioning circuits, intervals, and hard metabolic work.</p>
+      <p>The assessment showed limited hip extension, poor thoracic mobility, and a squat pattern compensating through the lower back on every rep. None of those problems get better by adding intensity. They compound.</p>
+      <p>The first six weeks were deliberate: hip-hinge mechanics, rotational stability, slow compound work. Nothing that looked like race prep. The client pushed back. I held the line.</p>
+      <p>By week ten, they were doing conditioning work that would have been genuinely dangerous in week one. On race day, they finished without injury. That is what "assess clearly" means in practice — the plan follows the body, not the goal the client walked in with.</p>
+    </section>
+
+    <!-- Links out of the page — items 9 and 11 -->
+    <section class="continue-section" aria-label="Continue reading">
+      <span class="continue-label">Continue</span>
+      <div class="continue-grid">
+
+        <div class="continue-card">
+          <span class="continue-card-eyebrow">On the site</span>
+          <h3>See the process</h3>
+          <p>How the assessment-driven approach translates into a coaching engagement, session by session.</p>
+          <a href="index.html#working" class="continue-card-link">How it works →</a>
+        </div>
+
+        <div class="continue-card">
+          <span class="continue-card-eyebrow">On the site</span>
+          <h3>Hear from clients</h3>
+          <p>What the results have looked like for founders, engineers, and operators who've trained this way.</p>
+          <a href="index.html#testimonials" class="continue-card-link">Read testimonials →</a>
+        </div>
+
+        <div class="continue-card">
+          <span class="continue-card-eyebrow">From the blog</span>
+          <h3>Keep reading</h3>
+          <p>Short essays on the same ideas, applied to specific situations.</p>
+          <nav class="blog-post-links" aria-label="Blog posts">
+            <a href="training-for-busy-professionals.html" class="blog-post-link">Training for busy professionals: what actually matters →</a>
+            <a href="beginners-too-much-too-soon.html" class="blog-post-link">Why most beginners are doing too much, too soon →</a>
+            <a href="powerlifting-prep-and-coaching.html" class="blog-post-link">What powerlifting prep teaches you about coaching →</a>
+          </nav>
+        </div>
+
+      </div>
     </section>
 
     <section class="cta">
@@ -193,10 +372,28 @@
         <h2>If that approach makes sense to you, we can talk.</h2>
         <p>The first conversation is just about what your body needs and whether I'm the right coach.</p>
       </div>
-      <a href="mailto:hello@baselevelstrength.org?subject=Schedule%20a%20call">Schedule a call</a>
+      <!-- REPLACE: update data-cal-link to your actual Cal.com username/event-slug -->
+      <button class="cta-btn" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a free intro call</button>
     </section>
   </main>
 
   <footer>© 2026 Base Level Strength. San Francisco &amp; Sacramento County.</footer>
+
+  <!-- Cal.com embed script (popup button only on this page) -->
+  <!-- REPLACE: update "baselevelstrength/intro-call" with your actual Cal.com link -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+    Cal("ui", { theme: "light", styles: { branding: { brandColor: "#3b5430" } } });
+  </script>
 </body>
 </html>

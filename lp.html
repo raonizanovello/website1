@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strength Coaching for Founders — Base Level Strength</title>
+  <meta name="description" content="Assessment-driven 1:1 strength coaching for founders and technical leaders. 12 weeks. Built around the schedule you actually have.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J169JQJY22"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J169JQJY22');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"></noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F7F5F0; --text: #2D2D2D; --text-sec: #6B6B6B; --text-muted: #9A9A9A;
+      --sage-100: #e6ece0; --sage-300: #a8bf9a;
+      --sage-600: #4a6a3b; --sage-700: #3b5430; --sage-800: #314429;
+      --border: #E5E0D8; --surface: #FFFFFF;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+      --max: 860px;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Minimal header — no nav links */
+    .lp-header { padding: 20px 24px; border-bottom: 1px solid rgba(55,60,43,0.08); }
+    .lp-header-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .lp-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; }
+
+    .lp-section { max-width: var(--max); margin: 0 auto; padding: 80px 24px; }
+    .lp-section + .lp-section { padding-top: 0; }
+
+    /* Hero */
+    .lp-hero { background: var(--sage-800); padding: 96px 24px 80px; }
+    .lp-hero-inner { max-width: var(--max); margin: 0 auto; }
+    .lp-eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--sage-300); margin-bottom: 22px; }
+    .lp-hero h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 58px); line-height: 1.0; letter-spacing: -0.8px; color: #fff; margin-bottom: 22px; max-width: 17ch; }
+    .lp-hero p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.76); max-width: 50ch; margin-bottom: 36px; }
+    .lp-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .lp-stat .num { display: block; font-family: var(--serif); font-size: 36px; line-height: 1; color: var(--sage-300); letter-spacing: -0.5px; margin-bottom: 5px; }
+    .lp-stat .lbl { font-size: 13px; color: rgba(255,255,255,0.54); }
+
+    /* What's different */
+    .lp-section h2 { font-family: var(--serif); font-size: clamp(30px, 3.5vw, 42px); line-height: 1.08; letter-spacing: -0.5px; margin-bottom: 36px; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+    .feature-card { padding: 24px 22px; border-radius: 16px; border: 1px solid var(--border); background: var(--surface); }
+    .feature-card strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 10px; }
+    .feature-card p { font-size: 15px; color: var(--text-sec); line-height: 1.68; margin: 0; }
+
+    /* Testimonials */
+    .lp-quotes { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+    .lp-quote-card { padding: 28px 24px; border-radius: 18px; border: 1px solid var(--border); background: var(--surface); }
+    .lp-quote-text { font-family: var(--serif); font-size: 22px; line-height: 1.26; margin-bottom: 16px; }
+    .lp-stars { font-size: 13px; letter-spacing: 2px; color: var(--sage-700); margin-bottom: 10px; }
+    .lp-attr { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+    /* Process */
+    .lp-process { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; position: relative; }
+    .lp-process::before { content: ''; position: absolute; top: 20px; left: 20px; right: 20px; height: 1px; background: var(--sage-100); }
+    .lp-step { position: relative; z-index: 1; }
+    .step-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--sage-700); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 18px; }
+    .lp-step h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .lp-step p { font-size: 14px; color: var(--text-sec); line-height: 1.65; margin: 0; padding-right: 20px; }
+
+    /* Booking section */
+    .lp-booking { background: #fff; border-top: 1px solid var(--border); padding: 80px 24px; }
+    .lp-booking-inner { max-width: var(--max); margin: 0 auto; }
+    .lp-booking h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .lp-booking p { font-size: 16px; color: var(--text-sec); max-width: 46ch; margin-bottom: 32px; }
+    #cal-lp-inline { width: 100%; min-height: 500px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+
+    /* Footer */
+    .lp-footer { padding: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; gap: 16px; max-width: var(--max); margin: 0 auto; }
+    .lp-footer a { color: var(--text-muted); }
+    .lp-footer a:hover { color: var(--text); }
+
+    @media (max-width: 720px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .lp-quotes { grid-template-columns: 1fr; }
+      .lp-process { grid-template-columns: 1fr; gap: 28px; }
+      .lp-process::before { display: none; }
+      .lp-stats { gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="lp-header">
+    <div class="lp-header-inner">
+      <a href="index.html" class="lp-brand">Base Level Strength</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <span class="lp-eyebrow">1:1 Strength Coaching · San Francisco</span>
+      <h1>Get measurably stronger in 12 weeks — without rearranging your life.</h1>
+      <p>Assessment-driven coaching for founders, engineers, and operators. Built around the schedule you actually have — not the one you wish you had.</p>
+      <div class="lp-stats">
+        <div class="lp-stat">
+          <span class="num">60+</span>
+          <span class="lbl">Professionals coached</span>
+        </div>
+        <div class="lp-stat">
+          <span class="num">7 yrs</span>
+          <span class="lbl">Coaching experience</span>
+        </div>
+        <div class="lp-stat">
+          <span class="num">CSCS</span>
+          <span class="lbl">Certified</span>
+        </div>
+        <div class="lp-stat">
+          <span class="num">3×</span>
+          <span class="lbl">Competitive powerlifter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What makes it different -->
+  <section class="lp-section">
+    <h2>Not another template. An actual assessment.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <strong>Movement screen first</strong>
+        <p>Every program starts from a 30-minute assessment. Your plan reflects how you actually move — not a default template applied to your name.</p>
+      </div>
+      <div class="feature-card">
+        <strong>Built for the broken week</strong>
+        <p>Travel, late nights, and changing calendars are programmed in from the start. Nothing collapses when the week gets hard.</p>
+      </div>
+      <div class="feature-card">
+        <strong>Same-day adjustments</strong>
+        <p>Direct access between sessions. When the week changes, the plan changes with it — not at the next scheduled call.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="lp-section">
+    <h2>How it works.</h2>
+    <div class="lp-process">
+      <div class="lp-step">
+        <div class="step-circle">1</div>
+        <h3>Free intro call</h3>
+        <p>20 minutes. What you need, how you train now, and whether this is the right fit.</p>
+      </div>
+      <div class="lp-step">
+        <div class="step-circle">2</div>
+        <h3>Assessment session</h3>
+        <p>Movement screen, baseline testing, and schedule mapping. The program follows from this.</p>
+      </div>
+      <div class="lp-step">
+        <div class="step-circle">3</div>
+        <h3>Program + ongoing coaching</h3>
+        <p>Monthly programming, check-in calls, and direct access. Adjusted as your life requires.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="lp-section">
+    <h2>What clients say.</h2>
+    <div class="lp-quotes">
+      <div class="lp-quote-card">
+        <div class="lp-stars">★★★★★</div>
+        <p class="lp-quote-text">"Ronnie is the first trainer who watched me move before writing anything. Eight months in, I'm stronger than I was at 25."</p>
+        <div class="lp-attr">Marcus T. — Co-founder, San Francisco</div>
+      </div>
+      <div class="lp-quote-card">
+        <div class="lp-stars">★★★★★</div>
+        <p class="lp-quote-text">"Six months in and the back pain that was affecting my daily life is gone. The assessment caught what two other trainers missed."</p>
+        <div class="lp-attr">Sarah M. — Founder &amp; CEO, San Francisco</div>
+      </div>
+      <div class="lp-quote-card">
+        <div class="lp-stars">★★★★★</div>
+        <p class="lp-quote-text">"I travel three days a week. Ronnie built something I can actually do on the road. No more skipped weeks."</p>
+        <div class="lp-attr">Jennifer K. — VP Engineering, San Francisco</div>
+      </div>
+      <div class="lp-quote-card">
+        <div class="lp-stars">★★★★★</div>
+        <p class="lp-quote-text">"My schedule is unpredictable. Ronnie adapts the plan in real time — that's the actual difference between this and everything I've tried before."</p>
+        <div class="lp-attr">Alex C. — Engineering Manager, remote</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="lp-booking" id="book">
+    <div class="lp-booking-inner">
+      <h2>Book a free intro call.</h2>
+      <p>20 minutes. No pitch. We'll talk about what you need and whether this is the right fit.</p>
+      <!-- REPLACE: update cal.com link below -->
+      <div id="cal-lp-inline"></div>
+    </div>
+  </section>
+
+  <footer class="lp-footer">
+    <span>© 2026 Base Level Strength · San Francisco</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  </footer>
+
+  <!-- Cal.com inline + popup script -->
+  <!-- REPLACE: update "baselevelstrength/intro-call" with your actual Cal.com link -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#cal-lp-inline",
+      calLink: "baselevelstrength/intro-call",
+      layout: "month_view"
+    });
+    Cal("ui", { theme: "light", styles: { branding: { brandColor: "#3b5430" } }, hideEventTypeDetails: false });
+  </script>
+
+</body>
+</html>

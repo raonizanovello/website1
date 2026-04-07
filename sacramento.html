@@ -55,6 +55,11 @@
     .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--text-soft); }
     .nav-links a:hover { color: var(--text); }
     .nav-cta { display: inline-flex; align-items: center; padding: 10px 18px; border-radius: 999px; background: var(--sage-700); color: #fff; font-weight: 500; cursor: pointer; border: none; font-family: var(--sans); font-size: 14px; text-decoration: none; }
+    .nav-toggle { display: none; background: transparent; border: 1px solid var(--border); border-radius: 10px; width: 42px; height: 42px; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+    .nav-toggle span { display: block; width: 18px; height: 2px; background: var(--text); position: relative; }
+    .nav-toggle span::before, .nav-toggle span::after { content: ''; position: absolute; left: 0; width: 18px; height: 2px; background: var(--text); }
+    .nav-toggle span::before { top: -6px; }
+    .nav-toggle span::after { top: 6px; }
 
     /* Section wrapper */
     .section { max-width: var(--max); margin: 0 auto; padding: 88px 24px; }
@@ -105,7 +110,28 @@
     .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 
     @media (max-width: 880px) {
-      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+      nav.is-open .nav-links { display: flex; }
+      .nav-links a:not(.nav-cta) {
+        display: block;
+        padding: 14px 4px;
+        font-size: 16px;
+        color: var(--text);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links .nav-cta { margin-top: 14px; align-self: flex-start; }
       .how-grid { grid-template-columns: 1fr; }
       .cta-inner { grid-template-columns: 1fr; }
       .sacc-cta { padding: 36px 28px; }
@@ -113,10 +139,11 @@
   </style>
 </head>
 <body>
-  <nav>
+  <nav id="site-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand">Base Level Strength</a>
-      <div class="nav-links">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <div class="nav-links" id="nav-links">
         <a href="index.html#about">About</a>
         <a href="index.html#working">How it works</a>
         <a href="index.html#pricing">Pricing</a>
@@ -230,5 +257,22 @@
     </div>
   </footer>
 
+  <script>
+    const nav = document.getElementById("site-nav");
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
 </body>
 </html>

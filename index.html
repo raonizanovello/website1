@@ -171,6 +171,8 @@
     .site-nav.is-scrolled .nav-links a:hover { color: var(--text); }
 
     .nav-cta {
+      display: inline-flex;
+      align-items: center;
       padding: 11px 18px;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -178,6 +180,7 @@
       color: #fff;
       font-weight: 500;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .site-nav.is-scrolled .nav-cta {
@@ -1004,7 +1007,7 @@
       text-underline-offset: 3px;
     }
 
-    /* Cal.com inline widget container */
+    /* Inline booking card */
     .cal-inline-wrap {
       border-radius: 18px;
       overflow: hidden;
@@ -1012,10 +1015,32 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    #cal-inline {
-      width: 100%;
-      min-height: 500px;
+    .cal-inline-card {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      color: rgba(245, 242, 233, 0.92);
     }
+
+    .cal-inline-card h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.15;
+      color: #fff;
+      margin: 0;
+    }
+
+    .cal-inline-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(245, 242, 233, 0.78);
+      margin: 0;
+      max-width: 36ch;
+    }
+
+    .cal-inline-card .button { margin-top: 6px; }
 
     .cal-fallback {
       display: flex;
@@ -1052,6 +1077,19 @@
     }
 
     @media (max-width: 980px) {
+      /* Always-visible header on mobile so the brand and CTA are legible at the top of the page */
+      .site-nav {
+        background: rgba(247, 245, 240, 0.94);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(18px);
+      }
+      .site-nav .brand { color: var(--text); text-shadow: none; }
+      .site-nav .nav-links { color: var(--text-soft); }
+      .site-nav .nav-cta {
+        border-color: transparent;
+        background: var(--sage-700);
+        color: #fff;
+      }
       .nav-links a:not(.nav-cta) { display: none; }
       .hero-inner { padding-top: 128px; padding-bottom: 64px; }
       .hero h1 { max-width: 12.2ch; }
@@ -1111,8 +1149,7 @@
         <a href="#pricing">Pricing</a>
         <a href="philosophy.html">Philosophy</a>
         <a href="blog.html">Blog</a>
-        <!-- REPLACE: update cal.com link to your actual username/event-slug -->
-        <button class="nav-cta" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a call</button>
+        <a class="nav-cta" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a call</a>
       </div>
     </div>
   </nav>
@@ -1126,12 +1163,11 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <span class="eyebrow">Strength coaching · San Francisco &amp; Sacramento</span>
-          <h1 class="hero-h1-a">You've built something worth protecting. Train like it.</h1>
-          <h1 class="hero-h1-b">Get measurably stronger in 12 weeks — without rearranging your life.</h1>
+          <h1 class="hero-h1-a">Get measurably stronger in 12 weeks without rearranging your life.</h1>
+          <h1 class="hero-h1-b">Get measurably stronger in 12 weeks without rearranging your life.</h1>
           <p class="hero-sub">Assessment-driven strength coaching for founders, operators, and technical leaders with real schedules.</p>
           <div class="hero-actions">
-            <!-- REPLACE: update cal.com link to your actual username/event-slug -->
-            <button class="button button-primary" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a free intro call</button>
+            <a class="button button-primary" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a free intro call</a>
             <a href="#about" class="button button-secondary">Learn more ↓</a>
           </div>
         </div>
@@ -1165,7 +1201,7 @@
           <span class="lbl">Professionals coached</span>
         </div>
         <div class="number-stat">
-          <span class="num">7</span>
+          <span class="num">5</span>
           <span class="lbl">Years coaching experience</span>
         </div>
         <div class="number-stat">
@@ -1186,7 +1222,7 @@
           <h2 class="section-title">Meet your coach.</h2>
           <p>I'm Ronnie, a CSCS-certified strength and conditioning coach in San Francisco. I assess movement, track progress, and build programs that hold up under real schedules.</p>
           <p>Most of my clients are senior professionals in tech and health. They need training that survives travel, long weeks, and changing demands. I also compete in powerlifting, so the standard I coach is the standard I train under.</p>
-          <p>Seven years and 60+ clients later, I've built a practice around one principle: your program should remove friction from your life, not add it.</p>
+          <p>Five years and 60+ clients later, I've built a practice around one principle: your program should remove friction from your life, not add it.</p>
           <a class="about-link" href="philosophy.html">Read my training philosophy →</a>
         </div>
 
@@ -1194,7 +1230,7 @@
           <img src="ronnie-portrait.jpg" alt="Ronnie, CSCS-certified strength coach in San Francisco" class="about-photo" loading="lazy" width="340" height="425">
           <div class="about-badge">
             <strong>Ronnie</strong>
-            <span>CSCS · San Francisco · 7 yrs experience</span>
+            <span>CSCS · San Francisco · 5 yrs experience</span>
           </div>
         </div>
       </div>
@@ -1389,8 +1425,7 @@
             <li>Travel &amp; schedule-adjusted program variants</li>
             <li>Progress tracking &amp; quarterly reviews</li>
           </ul>
-          <!-- REPLACE: update cal.com link to your actual username/event-slug -->
-          <button class="btn-sage" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a free intro call</button>
+          <a class="btn-sage" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a free intro call</a>
         </div>
 
         <div class="pricing-card">
@@ -1465,10 +1500,12 @@
             <div class="cta-note">Also serving select clients in Sacramento County — <a href="sacramento.html">learn more</a></div>
           </div>
 
-          <!-- REPLACE: update data-cal-link below to your actual Cal.com username/event-slug -->
-          <!-- The inline widget renders inside #cal-inline once the Cal.com script loads -->
           <div class="cal-inline-wrap">
-            <div id="cal-inline"></div>
+            <div class="cal-inline-card">
+              <h3>Email Ronnie to book your intro call</h3>
+              <p>Send a short note about what you're looking for. I'll reply within one business day with a few times that work.</p>
+              <a class="button button-primary" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Email hello@baselevelstrength.org</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1504,49 +1541,5 @@
     }, 500);
   </script>
 
-  <!-- Cal.com embed script -->
-  <!-- REPLACE: update all instances of "baselevelstrength/intro-call" with your actual Cal.com username/event-slug -->
-  <script type="text/javascript">
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.ns = {};
-          cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api = function () { p(api, arguments); };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          typeof namespace === "string"
-            ? (cal.ns[namespace] = api) && p(api, ar)
-            : p(cal, ar);
-          return;
-        }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-
-    Cal("init", { origin: "https://cal.com" });
-
-    // Inline widget in the CTA section
-    Cal("inline", {
-      elementOrSelector: "#cal-inline",
-      calLink: "baselevelstrength/intro-call",
-      layout: "month_view"
-    });
-
-    Cal("ui", {
-      theme: "light",
-      styles: { branding: { brandColor: "#3b5430" } },
-      hideEventTypeDetails: false,
-      layout: "month_view"
-    });
-  </script>
 </body>
 </html>

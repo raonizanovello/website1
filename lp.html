@@ -74,7 +74,8 @@
     .lp-booking-inner { max-width: var(--max); margin: 0 auto; }
     .lp-booking h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px); letter-spacing: -0.5px; margin-bottom: 10px; }
     .lp-booking p { font-size: 16px; color: var(--text-sec); max-width: 46ch; margin-bottom: 32px; }
-    #cal-lp-inline { width: 100%; min-height: 500px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+    .lp-booking-cta { display: inline-flex; align-items: center; justify-content: center; padding: 16px 26px; border-radius: 14px; background: var(--sage-700); color: #fff; font-weight: 500; font-size: 16px; transition: background 160ms ease; }
+    .lp-booking-cta:hover { background: var(--sage-800); }
 
     /* Footer */
     .lp-footer { padding: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; gap: 16px; max-width: var(--max); margin: 0 auto; }
@@ -102,7 +103,7 @@
   <section class="lp-hero">
     <div class="lp-hero-inner">
       <span class="lp-eyebrow">1:1 Strength Coaching · San Francisco</span>
-      <h1>Get measurably stronger in 12 weeks — without rearranging your life.</h1>
+      <h1>Get measurably stronger in 12 weeks without rearranging your life.</h1>
       <p>Assessment-driven coaching for founders, engineers, and operators. Built around the schedule you actually have — not the one you wish you had.</p>
       <div class="lp-stats">
         <div class="lp-stat">
@@ -110,7 +111,7 @@
           <span class="lbl">Professionals coached</span>
         </div>
         <div class="lp-stat">
-          <span class="num">7 yrs</span>
+          <span class="num">5 yrs</span>
           <span class="lbl">Coaching experience</span>
         </div>
         <div class="lp-stat">
@@ -197,9 +198,8 @@
   <section class="lp-booking" id="book">
     <div class="lp-booking-inner">
       <h2>Book a free intro call.</h2>
-      <p>20 minutes. No pitch. We'll talk about what you need and whether this is the right fit.</p>
-      <!-- REPLACE: update cal.com link below -->
-      <div id="cal-lp-inline"></div>
+      <p>20 minutes. No pitch. We'll talk about what you need and whether this is the right fit. Email me and I'll reply within one business day with a few times that work.</p>
+      <a class="lp-booking-cta" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Email hello@baselevelstrength.org</a>
     </div>
   </section>
 
@@ -207,19 +207,6 @@
     <span>© 2026 Base Level Strength · San Francisco</span>
     <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
   </footer>
-
-  <!-- Cal.com inline + popup script -->
-  <!-- REPLACE: update "baselevelstrength/intro-call" with your actual Cal.com link -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", { origin: "https://cal.com" });
-    Cal("inline", {
-      elementOrSelector: "#cal-lp-inline",
-      calLink: "baselevelstrength/intro-call",
-      layout: "month_view"
-    });
-    Cal("ui", { theme: "light", styles: { branding: { brandColor: "#3b5430" } }, hideEventTypeDetails: false });
-  </script>
 
 </body>
 </html>

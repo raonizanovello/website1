@@ -54,7 +54,7 @@
     .nav-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; }
     .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--text-soft); }
     .nav-links a:hover { color: var(--text); }
-    .nav-cta { padding: 10px 18px; border-radius: 999px; background: var(--sage-700); color: #fff; font-weight: 500; cursor: pointer; border: none; font-family: var(--sans); font-size: 14px; }
+    .nav-cta { display: inline-flex; align-items: center; padding: 10px 18px; border-radius: 999px; background: var(--sage-700); color: #fff; font-weight: 500; cursor: pointer; border: none; font-family: var(--sans); font-size: 14px; text-decoration: none; }
 
     /* Section wrapper */
     .section { max-width: var(--max); margin: 0 auto; padding: 88px 24px; }
@@ -121,8 +121,7 @@
         <a href="index.html#working">How it works</a>
         <a href="index.html#pricing">Pricing</a>
         <a href="blog.html">Blog</a>
-        <!-- REPLACE: update cal.com link -->
-        <button class="nav-cta" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a call</button>
+        <a class="nav-cta" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a call</a>
       </div>
     </div>
   </nav>
@@ -134,8 +133,7 @@
         <span class="eyebrow">Sacramento County</span>
         <h1>Strength coaching for Sacramento professionals.</h1>
         <p>The same assessment-driven standard as the SF practice — now serving select clients in Sacramento County. Remote-first, with in-person availability for those who want it.</p>
-        <!-- REPLACE: update cal.com link -->
-        <button class="hero-btn" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a free intro call</button>
+        <a class="hero-btn" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a free intro call</a>
       </div>
     </section>
 
@@ -213,8 +211,7 @@
             <h2>Ready to talk?</h2>
             <p>The first call is 20 minutes: what you need, how you currently train, and whether there's a fit. No pitch. If it's not right, I'll say so.</p>
           </div>
-          <!-- REPLACE: update cal.com link -->
-          <button class="cta-btn" data-cal-link="baselevelstrength/intro-call" data-cal-config='{"layout":"month_view"}'>Book a free intro call</button>
+          <a class="cta-btn" href="mailto:hello@baselevelstrength.org?subject=Intro%20call%20request">Book a free intro call</a>
         </div>
       </div>
     </section>
@@ -233,11 +230,5 @@
     </div>
   </footer>
 
-  <!-- Cal.com popup script – REPLACE cal.com link -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", { origin: "https://cal.com" });
-    Cal("ui", { theme: "light", styles: { branding: { brandColor: "#3b5430" } } });
-  </script>
 </body>
 </html>

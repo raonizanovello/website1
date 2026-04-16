@@ -9,6 +9,18 @@
   </url>
 
   <url>
+    <loc>https://baselevelstrength.org/method.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://baselevelstrength.org/assessment.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://baselevelstrength.org/philosophy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

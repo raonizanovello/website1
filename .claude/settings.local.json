@@ -8,7 +8,8 @@
       "Bash(grep -rn \"favicon\" *.html)",
       "Bash(grep -rn \"gtag\\\\|G-\\\\|UA-\\\\|analytics\" *.html)",
       "Bash(grep -rn \"instagram\\\\|twitter\\\\.com\\\\|linkedin\\\\.com\" *.html)",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "WebFetch(domain:site.leandrotwin.com.br)"
     ]
   }
 }

@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base Level Strength | Strength, Hypertrophy & Nutrition Coaching at a Price That Makes Sense</title>
-  <meta name="description" content="Custom strength and hypertrophy programs with direct nutrition coaching, built by a NASM-certified coach. Education-first online coaching for beginners and intermediate lifters.">
+  <title>Base Level Strength | Strength, Hypertrophy & Nutrition Guidance at a Price That Makes Sense</title>
+  <meta name="description" content="Custom strength and hypertrophy programs with evidence-based nutrition guidelines, built by a NASM-certified coach. Education-first online coaching for beginners and intermediate lifters.">
 
   <script>(function(){try{var v=localStorage.getItem('_bls_v')||(Math.random()<.5?'A':'B');localStorage.setItem('_bls_v',v);document.documentElement.setAttribute('data-ab',v);}catch(e){}})();</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Base Level Strength">
-  <meta property="og:title" content="Base Level Strength | Strength, Hypertrophy & Nutrition Coaching">
-  <meta property="og:description" content="Personal training with direct nutrition coaching built in. For less than one hour with a trainer.">
+  <meta property="og:title" content="Base Level Strength | Strength, Hypertrophy & Nutrition Guidance">
+  <meta property="og:description" content="Personal training with evidence-based nutrition guidelines built in. Quality coaching at a price everyone can afford.">
   <meta property="og:url" content="https://baselevelstrength.org/">
   <meta property="og:image" content="https://baselevelstrength.org/ronnie-portrait.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,14 +34,14 @@
         "@id": "https://baselevelstrength.org/#org",
         "name": "Base Level Strength",
         "url": "https://baselevelstrength.org",
-        "email": "hello@baselevelstrength.org",
-        "description": "Online strength and hypertrophy coaching with direct, evidence-based nutrition coaching built in.",
+        "email": "raoni.fitness@gmail.com",
+        "description": "Online strength and hypertrophy coaching with evidence-based nutrition guidelines built in. Quality coaching at a price everyone can afford.",
         "sameAs": ["https://www.instagram.com/strength.v6/"]
       },
       {
         "@type": "Service",
         "@id": "https://baselevelstrength.org/#service",
-        "name": "Online Strength and Nutrition Coaching",
+        "name": "Online Strength Coaching with Nutrition Guidance",
         "serviceType": "Personal Training",
         "provider": {"@id": "https://baselevelstrength.org/#org"},
         "areaServed": "Worldwide",
@@ -59,7 +59,7 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type":"Question","name":"Is online coaching this affordable actually any good?","acceptedAnswer":{"@type":"Answer","text":"Most cheap online training isn't, but Base Level Strength is a different model: NASM-certified programming, licensed nutritionist guidance behind every nutrition plan, biomechanics education, and progressive reassessments. The price is low because the delivery model is built for it, not because corners were cut."}},
+          {"@type":"Question","name":"Is online coaching this affordable actually any good?","acceptedAnswer":{"@type":"Answer","text":"Most cheap online training isn't, but Base Level Strength is a different model: NASM-certified programming, evidence-based nutrition guidelines inspired by Jeff Cavaliere's principles-first approach, biomechanics education, and progressive reassessments. The price is low because the delivery model is built for it, not because corners were cut."}},
           {"@type":"Question","name":"Why is there a 3-month minimum on every plan?","acceptedAnswer":{"@type":"Answer","text":"Because real change requires real commitment. One month doesn't move the needle. Your body needs at least 8 to 12 weeks of consistent progressive training to make adaptations that actually last. We won't sell a one-month program because it would set you up to fail."}},
           {"@type":"Question","name":"What if I'm a complete beginner?","acceptedAnswer":{"@type":"Answer","text":"Beginners are who we built this for. Every program assumes you don't know what a hip hinge is and teaches it before you do it."}},
           {"@type":"Question","name":"What equipment do I need?","acceptedAnswer":{"@type":"Answer","text":"Each program is built around your equipment, full gym, home gym, dumbbells only, or bodyweight. You specify in your intake."}},
@@ -314,6 +314,38 @@
     .cred-dot {
       width: 6px; height: 6px; border-radius: 50%;
       background: var(--sage-300); flex-shrink: 0;
+    }
+
+    /* ── MISSION BAND ── */
+    .mission-band {
+      background: var(--sage-100);
+      border-bottom: 1px solid rgba(74,106,59,0.12);
+    }
+    .mission-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 10px;
+    }
+    .mission-inner .mission-eyebrow {
+      font-family: "Outfit", sans-serif;
+      font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage-700); font-weight: 600;
+    }
+    .mission-inner .mission-line {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic; font-weight: 500;
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.32; color: var(--sage-800);
+      max-width: 820px; margin: 0;
+    }
+    .mission-inner .mission-line strong {
+      font-style: normal; font-weight: 600; color: var(--sage-700);
+    }
+    .mission-inner .mission-sign {
+      font-size: 13px; color: var(--text-soft);
+      letter-spacing: 0.04em;
     }
 
     /* ── PROBLEM ── */
@@ -622,8 +654,49 @@
       color: var(--text-soft); vertical-align: middle;
     }
     .pricing-note-sm {
-      font-size: 12px; color: var(--text-muted); margin-bottom: 24px;
+      font-size: 12px; color: var(--text-muted); margin-bottom: 14px;
       line-height: 1.5;
+    }
+    .pricing-commit {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 11px; border-radius: 999px;
+      background: var(--sage-100);
+      color: var(--sage-700);
+      font-size: 11.5px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .pricing-commit::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--sage-600);
+    }
+    .pricing-value {
+      margin: 6px 0 24px;
+      padding: 14px 16px; border-radius: 12px;
+      background: rgba(74,106,59,0.06);
+      border: 1px dashed rgba(74,106,59,0.22);
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .pricing-value .pv-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 12px; font-size: 13.5px;
+      color: var(--text-soft); line-height: 1.4;
+    }
+    .pricing-value .pv-row strong {
+      color: var(--text); font-weight: 600;
+      font-family: var(--sans);
+    }
+    .pricing-value .pv-row.pv-savings strong {
+      color: var(--sage-700);
+    }
+    .pricing-value .pv-divider {
+      height: 1px; background: rgba(74,106,59,0.18);
+      margin: 2px 0;
+    }
+    .pricing-value .pv-worth {
+      font-size: 12px; color: var(--text-muted);
+      font-style: italic; line-height: 1.4;
     }
     .pricing-features {
       list-style: none; padding: 0; margin: 0 0 28px;
@@ -825,6 +898,7 @@
         <a href="#methodology">Methodology</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
+        <a href="https://calendly.com/raoni-fitness/intro-call" target="_blank" rel="noopener noreferrer">Book a call</a>
         <a class="nav-cta" href="#pricing">See the programs</a>
       </div>
     </div>
@@ -842,15 +916,15 @@
         <img src="ronnie-portrait.jpg" alt="Raoni, NASM-Certified Strength Coach" class="hero-avatar">
         <div class="hero-name">Coached by Raoni</div>
         <div class="hero-credentials">NASM-CPT · CSCS in Progress</div>
-        <h1 class="hero-h1-a">Personal Training Built by a Certified Coach. Nutrition Coaching Included. For Less Than One Hour With a Trainer.</h1>
+        <h1 class="hero-h1-a">Personal Training Built by a Certified Coach. Nutrition Guidance Included. For Less Than One Hour With a Trainer.</h1>
         <h1 class="hero-h1-b">Most Online Coaches Sell You a Spreadsheet. I Build You a Lifter.</h1>
-        <p class="hero-sub">Custom strength and hypertrophy programs designed around how your body actually moves. Direct, evidence-based nutrition coaching built into every plan. The biomechanics education most online trainers never bother to teach. All at a price that finally makes sense.</p>
+        <p class="hero-sub">Custom strength and hypertrophy programs designed around how your body actually moves. Evidence-based nutrition guidelines, inspired by Jeff Cavaliere's principles-first approach, built into every plan. The biomechanics education most online trainers never bother to teach. All at a price that finally makes sense.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#pricing">See the Programs</a>
-          <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+          <a class="btn btn-ghost" href="https://calendly.com/raoni-fitness/intro-call" target="_blank" rel="noopener noreferrer">Book a free intro call</a>
         </div>
         <div class="hero-trust">
-          <strong>NASM-Certified Coach</strong> · <strong>Nutrition Coaching Included</strong> · <strong>Built for Beginners and Intermediate Lifters</strong>
+          <strong>NASM-Certified Coach</strong> · <strong>Nutrition Guidance Included</strong> · <strong>Built for Beginners and Intermediate Lifters</strong>
         </div>
       </div>
     </section>
@@ -860,10 +934,19 @@
       <div class="cred-inner">
         <span class="cred-chip"><span class="cred-dot"></span>NASM-CPT Certified</span>
         <span class="cred-chip"><span class="cred-dot"></span>CSCS in Progress</span>
-        <span class="cred-chip"><span class="cred-dot"></span>Nutrition Coaching Built In</span>
+        <span class="cred-chip"><span class="cred-dot"></span>Nutrition Guidance Built In</span>
         <span class="cred-chip"><span class="cred-dot"></span>Strength + Hypertrophy</span>
         <span class="cred-chip"><span class="cred-dot"></span>Biomechanics-First</span>
         <span class="cred-chip"><span class="cred-dot"></span>30-Day Refund Guarantee</span>
+      </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="mission-band" id="mission">
+      <div class="mission-inner">
+        <span class="mission-eyebrow">Our mission</span>
+        <p class="mission-line">Everybody deserves <strong>good quality coaching</strong> at a price that makes sense. That's the entire reason Base Level Strength exists.</p>
+        <span class="mission-sign">— Raoni, NASM-CPT · Founder</span>
       </div>
     </div>
 
@@ -897,8 +980,8 @@
           <div class="row-item">
             <div class="row-num">02</div>
             <div class="row-text">
-              <h3>Nutrition coaching built directly into the program</h3>
-              <p>No referrals, no third parties. I give you direct, evidence-based nutrition coaching as part of every plan. Practical frameworks that support how you're actually training, not rigid meal plans you'll abandon after a week.</p>
+              <h3>Nutrition guidance built directly into the program</h3>
+              <p>No referrals, no third parties, no nutritionist consults. You get evidence-based nutrition guidelines, inspired by Jeff Cavaliere's principles-first approach, as part of every plan. Practical frameworks that support how you're actually training, not rigid meal plans you'll abandon after a week.</p>
             </div>
           </div>
           <div class="row-item">
@@ -987,12 +1070,12 @@
       </div>
     </section>
 
-    <!-- COACH STORY + NUTRITIONIST CALLOUT -->
+    <!-- COACH STORY + NUTRITION GUIDANCE CALLOUT -->
     <section class="duo-section" id="team">
       <div class="duo-inner">
         <div class="duo-intro">
           <span class="label label-light">Who you're working with</span>
-          <h2 class="h2 h2-light">Your coach. With clinical nutrition expertise behind him.</h2>
+          <h2 class="h2 h2-light">Your coach. One point of contact. Science-backed training and nutrition.</h2>
           <p class="body-text body-text-light">Most online programs hide who's actually behind them. Or worse, there's nobody behind them at all. Just an algorithm spitting out templates. Here's exactly who builds your plan.</p>
         </div>
 
@@ -1011,8 +1094,8 @@
         </div>
 
         <div class="nutrition-callout">
-          <strong>Behind the nutrition side of every plan</strong>
-          <p>I work with a licensed nutritionist who guides the nutrition recommendations I build into your program. You don't talk to her directly. You talk to me. But the macro targets, food lists, and meal structure I give you are built on real clinical expertise, not pulled from an app or a calculator.</p>
+          <strong>Nutrition done the Cavaliere way. Guidelines, not gospel.</strong>
+          <p>You don't need a nutritionist. You need clear, evidence-based principles you can actually apply in real life. My nutrition guidance is built on the same approach Jeff Cavaliere has taught for two decades: practical guidelines, science-grounded principles, and food choices that fit your training, your schedule, and your real life. No rigid meal plans. No 1,200-calorie spreadsheets. You'll know what to eat, why to eat it, and how to adjust as your body changes.</p>
         </div>
       </div>
     </section>
@@ -1033,8 +1116,8 @@
           </li>
           <li>
             <div>
-              <strong>Nutrition guidance, backed by a licensed nutritionist</strong>
-              <span>Foundation includes a nutritionist-guided macro framework and meal templates. Strength and Complete include a fully personalized nutrition plan built with my consultant's input.</span>
+              <strong>Nutrition guidelines, Cavaliere-style</strong>
+              <span>Evidence-based principles, not rigid meal plans. Foundation includes a macro framework and food templates. Strength and Complete add fully personalized macro targets, food lists, and meal structure built around your training, preferences, and real life.</span>
             </div>
           </li>
           <li>
@@ -1112,7 +1195,7 @@
       <div class="col">
         <span class="label">The programs</span>
         <h2 class="h2">Three plans. Pick the level of coaching you want.</h2>
-        <p class="body-text">All plans run on a 3-month minimum commitment, with a 30-day full-refund guarantee on every one. If it isn't right inside your first month, we refund you in full.</p>
+        <p class="body-text">Every plan is <strong>billed monthly with a 3-month minimum commitment</strong>, because real change takes a real runway. The 30-day full-refund guarantee covers every one. If it isn't right inside your first month, we refund you in full, no questions.</p>
       </div>
 
       <div class="col-wide">
@@ -1121,41 +1204,62 @@
           <div class="pricing-card">
             <div class="pricing-type">Foundation</div>
             <div class="pricing-tagline">"For the lifter who just needs a real plan."</div>
+            <span class="pricing-commit">3-Month Minimum</span>
             <div class="pricing-price">$49<sub>/mo</sub></div>
-            <div class="pricing-note-sm">3-month minimum. Quarterly billing saves 20%.</div>
+            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
+            <div class="pricing-value">
+              <div class="pv-row"><span>3-month total</span><strong>$147</strong></div>
+              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$118</strong></div>
+              <div class="pv-divider"></div>
+              <div class="pv-worth">Less than $1.65/day for the full system. Equivalent retail value: $950+/mo.</div>
+            </div>
             <ul class="pricing-features">
               <li>Custom 12-week strength and hypertrophy program</li>
-              <li>Nutrition framework guided by my licensed nutritionist consultant</li>
+              <li>Cavaliere-style nutrition guidelines: macro framework, food lists, meal templates</li>
               <li>Exercise video library and biomechanics breakdowns</li>
               <li>"The Why" educational module</li>
               <li>Email support, 48-hour response</li>
               <li>Program reassessment every 4 weeks</li>
             </ul>
-            <a class="btn btn-outline" style="width:100%;" href="mailto:hello@baselevelstrength.org?subject=Start%20Foundation">Start Foundation</a>
+            <a class="btn btn-outline" style="width:100%;" href="mailto:raoni.fitness@gmail.com?subject=Start%20Foundation">Start Foundation</a>
           </div>
 
           <div class="pricing-card featured">
             <div class="pricing-popular">Most popular</div>
             <div class="pricing-type">Strength</div>
             <div class="pricing-tagline">"For the lifter who wants accountability and customization."</div>
+            <span class="pricing-commit">3-Month Minimum</span>
             <div class="pricing-price">$99<sub>/mo</sub></div>
-            <div class="pricing-note-sm">3-month minimum. Quarterly billing saves 20%.</div>
+            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
+            <div class="pricing-value">
+              <div class="pv-row"><span>3-month total</span><strong>$297</strong></div>
+              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$238</strong></div>
+              <div class="pv-divider"></div>
+              <div class="pv-worth">A single 1-on-1 PT session costs more. You get 3 months of full coaching.</div>
+            </div>
             <ul class="pricing-features">
               <li class="plus">Everything in Foundation</li>
-              <li>Fully personalized nutrition plan, built with my nutritionist consultant</li>
+              <li>Fully personalized nutrition guidelines: macros, food lists, meal structure tailored to your life</li>
               <li>Monthly form review with personal coaching feedback</li>
               <li>Bi-weekly check-ins with adjustments</li>
               <li>Adaptive programming, evolves every 4 weeks</li>
               <li>Priority chat support, 24-hour response</li>
             </ul>
-            <a class="btn btn-primary" style="width:100%;" href="mailto:hello@baselevelstrength.org?subject=Start%20Strength">Start Strength</a>
+            <a class="btn btn-primary" style="width:100%;" href="mailto:raoni.fitness@gmail.com?subject=Start%20Strength">Start Strength</a>
           </div>
 
           <div class="pricing-card">
             <div class="pricing-type">Complete</div>
             <div class="pricing-tagline">"For the lifter who wants a coach, not a program."</div>
+            <span class="pricing-commit">3-Month Minimum</span>
             <div class="pricing-price">$199<sub>/mo</sub></div>
-            <div class="pricing-note-sm">3-month minimum. Quarterly billing saves 20%.</div>
+            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
+            <div class="pricing-value">
+              <div class="pv-row"><span>3-month total</span><strong>$597</strong></div>
+              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$478</strong></div>
+              <div class="pv-divider"></div>
+              <div class="pv-worth">Equivalent in-person coaching: $2,400+ for the same 3 months.</div>
+            </div>
             <ul class="pricing-features">
               <li class="plus">Everything in Strength</li>
               <li>Weekly 1-on-1 check-ins (async voice or video)</li>
@@ -1164,16 +1268,16 @@
               <li>WhatsApp/Voxer access for quick questions</li>
               <li>Quarterly deeper-dive program reviews</li>
             </ul>
-            <a class="btn btn-outline" style="width:100%;" href="mailto:hello@baselevelstrength.org?subject=Start%20Complete">Start Complete</a>
+            <a class="btn btn-outline" style="width:100%;" href="mailto:raoni.fitness@gmail.com?subject=Start%20Complete">Start Complete</a>
           </div>
 
         </div>
 
         <div class="col">
           <div class="pricing-stack">
-            <strong>What you'd pay separately:</strong> A custom strength program from a 1-on-1 trainer ($400+). A licensed nutritionist's personalized plan ($300+). Monthly form review and check-ins ($300+). Equivalent retail value: $1,000+ per month. <strong>Your price starts at $49.</strong>
+            <strong>What you'd pay separately:</strong> A custom strength program from a 1-on-1 trainer ($400+). Personalized nutrition guidance and macro coaching ($250+). Monthly form review and check-ins ($300+). Equivalent retail value: $950+ per month. <strong>Your price starts at $49.</strong>
           </div>
-          <p style="margin-top: 24px; font-size: 14px; line-height: 1.72; color: var(--text-soft);">All prices listed are monthly with a 3-month minimum commitment. Save 20% with quarterly billing. Annual single-pay available, ask in your intake. After your first 3 months, cancel anytime. 30-day money-back guarantee on every plan.</p>
+          <p style="margin-top: 24px; font-size: 14px; line-height: 1.72; color: var(--text-soft);">All prices listed are monthly. Every plan starts with a 3-month minimum commitment so the work has time to actually compound. Save 20% by paying quarterly up front. Annual single-pay is available, just ask in your intake. After your first 3 months, cancel anytime. 30-day full-refund guarantee on every plan, even inside the 3-month minimum.</p>
         </div>
       </div>
     </section>
@@ -1196,8 +1300,8 @@
             <p>NASM means real, formal training in corrective exercise, biomechanics, and program design. The foundations most online coaches skip entirely. CSCS, the gold standard for strength coaching, is in progress. Every program is built using actual exercise science, not a recycled template bought off another coach.</p>
           </div>
           <div class="objection-block">
-            <strong>3. Nutrition guidance with real clinical expertise behind it.</strong>
-            <p>This is the part nobody else offers at this price. I work with a licensed nutritionist who guides every macro target, food list, and meal structure I build for you. The same clinical expertise you'd otherwise pay $150 a session for, channeled to you through a single point of contact. Combined with your training, that's the full picture most online coaches simply can't deliver.</p>
+            <strong>3. Nutrition guidelines that actually fit your life.</strong>
+            <p>This is the part nobody else gets right at this price. My nutrition guidance is built on Jeff Cavaliere's principles-first approach: science-backed guidelines, practical food choices, and macro targets that flex with your training and your real life. Not a 1,200-calorie spreadsheet you'll abandon in a week. Not an upsell to a separate nutritionist. Just clear principles you understand, applied to your training, owned end-to-end by me.</p>
           </div>
           <div class="objection-block">
             <strong>4. I teach you, not just train you.</strong>
@@ -1252,7 +1356,7 @@
             <summary>Is online coaching this affordable actually any good?</summary>
             <div class="faq-body">
               <p>The right question. Most cheap online training isn't good. Most cheap online coaches just sell you a recycled Google Sheet.</p>
-              <p>Base Level Strength is a different model. NASM-certified programming, nutrition guidance backed by a licensed nutritionist, biomechanics education, and progressive reassessments built in. The price is low because the delivery model is built for it. No gym overhead, no drive time, no scheduling overhead. The same expertise without the cost padding. And if you don't agree after 30 days, I refund you in full.</p>
+              <p>Base Level Strength is a different model. NASM-certified programming, evidence-based nutrition guidelines inspired by Jeff Cavaliere's principles-first approach, biomechanics education, and progressive reassessments built in. The price is low because the delivery model is built for it. No gym overhead, no drive time, no scheduling overhead. The same expertise without the cost padding. And if you don't agree after 30 days, I refund you in full.</p>
             </div>
           </details>
 
@@ -1296,8 +1400,9 @@
           <details class="faq-item">
             <summary>How is the nutrition side actually handled?</summary>
             <div class="faq-body">
-              <p>I work with a licensed nutritionist who guides every nutrition recommendation that goes into your plan. <strong>You don't talk to her directly. You talk to me.</strong> But every macro target, food list, and meal structure I give you is built on her clinical expertise, not pulled from an app or a calculator.</p>
-              <p>Foundation includes a nutrition framework with food list and meal templates. Strength and Complete include a fully personalized nutrition plan with food preferences, allergies, and lifestyle accounted for, plus ongoing adjustments as your training and body change.</p>
+              <p><strong>It's guidelines, not a nutritionist consult.</strong> My approach is built on the same principles-first philosophy Jeff Cavaliere has taught for two decades: practical, science-grounded nutrition guidance you can actually apply, instead of rigid meal plans you'll abandon in two weeks.</p>
+              <p>Foundation includes a macro framework with food lists and meal templates. Strength and Complete add fully personalized macro targets, food preferences, allergies, and lifestyle factors, plus ongoing adjustments as your training and body change.</p>
+              <p>You won't get a "licensed nutritionist consultation" because you don't need one. You'll get clear principles, practical guidance, and a system that flexes with your real life.</p>
             </div>
           </details>
 
@@ -1330,7 +1435,7 @@
             <div class="faq-body">
               <p>Because the cost structure is different, not because the coaching is.</p>
               <p>Traditional personal training is expensive because of overhead. Gym rent, equipment, drive time between clients, scheduling friction, and the simple math that one trainer can only see 5 to 8 clients a day in person. Online coaching strips all of that out. The expertise is the same. The delivery model is built for scale.</p>
-              <p>What you don't get vs. 1-on-1 in-person: a coach standing next to you while you lift. What you do get: a custom program, nutrition plan, biomechanics education, and ongoing coaching access from a credentialed coach with licensed nutritionist support behind him. For less than one in-person session per month.</p>
+              <p>What you don't get vs. 1-on-1 in-person: a coach standing next to you while you lift. What you do get: a custom program, evidence-based nutrition guidelines, biomechanics education, and ongoing coaching access from a credentialed coach. For less than one in-person session per month.</p>
             </div>
           </details>
 
@@ -1362,15 +1467,16 @@
         <p class="body-text body-text-light" style="text-align:center;">Three plans, all with a 3-month minimum commitment and a 30-day full-refund guarantee. The first program lands in your account within 72 hours of your intake.</p>
         <ul class="final-checks">
           <li>Custom strength and hypertrophy programming</li>
-          <li>Nutrition guidance backed by my licensed nutritionist consultant</li>
+          <li>Cavaliere-style nutrition guidelines built into every plan</li>
           <li>Biomechanics education built in</li>
           <li>30-day full-refund guarantee on every plan</li>
           <li>3-month minimum, then cancel anytime</li>
         </ul>
         <div class="final-cta-actions">
           <a class="btn btn-primary" href="#pricing">See the Programs</a>
+          <a class="btn btn-ghost" href="https://calendly.com/raoni-fitness/intro-call" target="_blank" rel="noopener noreferrer">Book a free intro call</a>
         </div>
-        <p class="final-small">hello@baselevelstrength.org</p>
+        <p class="final-small">raoni.fitness@gmail.com · <a href="https://calendly.com/raoni-fitness/intro-call" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Book on Calendly</a></p>
       </div>
     </section>
 

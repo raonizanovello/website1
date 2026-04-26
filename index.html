@@ -644,59 +644,50 @@
       color: var(--text-soft);
       margin-bottom: 18px; line-height: 1.4;
     }
-    .pricing-price {
-      font-family: var(--serif); font-size: 56px; line-height: 1;
-      letter-spacing: -2px; color: var(--text); margin-bottom: 4px;
+    /* ── BLOCK SELECTOR ── */
+    .block-selector {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 8px; margin: 20px 0 28px;
+      border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--border);
     }
-    .pricing-price sub {
-      font-size: 17px; letter-spacing: 0;
-      font-family: var(--sans); font-weight: 400;
-      color: var(--text-soft); vertical-align: middle;
+    .block-option {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      padding: 14px 10px; gap: 4px;
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      position: relative;
     }
-    .pricing-note-sm {
-      font-size: 12px; color: var(--text-muted); margin-bottom: 14px;
-      line-height: 1.5;
+    .block-option:last-child { border-right: none; }
+    .block-option.block-best {
+      background: var(--sage-800); color: #fff;
     }
-    .pricing-commit {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 11px; border-radius: 999px;
-      background: var(--sage-100);
-      color: var(--sage-700);
-      font-size: 11.5px; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      margin-bottom: 14px;
+    .block-dur {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-muted);
     }
-    .pricing-commit::before {
-      content: ''; display: inline-block;
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--sage-600);
+    .block-option.block-best .block-dur { color: rgba(255,255,255,0.65); }
+    .block-total {
+      font-family: var(--serif); font-size: 28px;
+      font-weight: 600; line-height: 1.1;
+      color: var(--text); letter-spacing: -0.5px;
     }
-    .pricing-value {
-      margin: 6px 0 24px;
-      padding: 14px 16px; border-radius: 12px;
-      background: rgba(74,106,59,0.06);
-      border: 1px dashed rgba(74,106,59,0.22);
-      display: flex; flex-direction: column; gap: 8px;
+    .block-option.block-best .block-total { color: #fff; }
+    .block-save {
+      font-size: 11px; font-weight: 700;
+      color: var(--sage-600); letter-spacing: 0.06em;
     }
-    .pricing-value .pv-row {
-      display: flex; justify-content: space-between; align-items: baseline;
-      gap: 12px; font-size: 13.5px;
-      color: var(--text-soft); line-height: 1.4;
-    }
-    .pricing-value .pv-row strong {
-      color: var(--text); font-weight: 600;
-      font-family: var(--sans);
-    }
-    .pricing-value .pv-row.pv-savings strong {
-      color: var(--sage-700);
-    }
-    .pricing-value .pv-divider {
-      height: 1px; background: rgba(74,106,59,0.18);
-      margin: 2px 0;
-    }
-    .pricing-value .pv-worth {
-      font-size: 12px; color: var(--text-muted);
-      font-style: italic; line-height: 1.4;
+    .block-option.block-best .block-save { color: var(--sage-300); }
+    .block-badge {
+      position: absolute; top: -1px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--sage-300); color: var(--sage-800);
+      font-size: 9px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 2px 10px; border-radius: 0 0 8px 8px;
+      white-space: nowrap;
     }
     .pricing-features {
       list-style: none; padding: 0; margin: 0 0 28px;
@@ -1049,7 +1040,7 @@
             <div class="step-num">1</div>
             <div class="step-text">
               <h3>Pick your plan</h3>
-              <p>Choose Foundation, Strength, or Complete. All plans run on a 3-month minimum commitment. Your first 30 days are still risk-free with a full refund guarantee.</p>
+              <p>Choose Foundation, Strength, or Complete. Then pick your block: 3, 6, or 12 months. The longer the block, the bigger the discount. Your first 30 days are still risk-free with a full refund guarantee.</p>
             </div>
           </div>
           <div class="step-item">
@@ -1145,15 +1136,15 @@
     <!-- 3-MONTH COMMITMENT EXPLAINER -->
     <section class="commit-section pad" id="commitment">
       <div class="col">
-        <span class="label">The 3-month commitment</span>
-        <h2 class="h2">Why every plan starts with a 3-month minimum.</h2>
+        <span class="label">Why blocks work</span>
+        <h2 class="h2">Why coaching works in blocks — and why longer blocks win.</h2>
         <p class="body-text">Because real change requires real commitment. One month doesn't move the needle.</p>
 
         <div class="commit-card">
           <h3>The work happens between weeks 4 and 12.</h3>
           <p>Your body needs at least 8 to 12 weeks of consistent, progressive training to make adaptations that actually last. The first month is baseline, learning the lifts, dialing in nutrition, and finding your training rhythm. <strong>The real progress happens in months 2 and 3.</strong></p>
-          <p>I won't sell you a one-month program because it would set you up to fail. Real bodies don't transform on monthly subscriptions. They transform on consistent input, repeated long enough to compound.</p>
-          <p>If after your first 30 days you don't believe in the work, the refund still applies. After 3 months, you're free to cancel anytime. <strong>The commitment is to results, not to me.</strong></p>
+          <p>I won't sell you a one-month program because it would set you up to fail. Real bodies don't transform on subscriptions you can cancel the moment it gets hard. They transform on committed blocks of consistent input, repeated long enough to compound.</p>
+          <p>If after your first 30 days you don't believe in the work, the refund still applies. After your block ends, you choose whether to renew — and which block makes sense next. <strong>The commitment is to results, not to me.</strong></p>
         </div>
       </div>
     </section>
@@ -1195,7 +1186,7 @@
       <div class="col">
         <span class="label">The programs</span>
         <h2 class="h2">Three plans. Pick the level of coaching you want.</h2>
-        <p class="body-text">Every plan is <strong>billed monthly with a 3-month minimum commitment</strong>, because real change takes a real runway. The 30-day full-refund guarantee covers every one. If it isn't right inside your first month, we refund you in full, no questions.</p>
+        <p class="body-text">Coaching works in <strong>blocks, starting at 3 months</strong>. Pick your block — the longer the commitment, the better the deal. The 30-day full-refund guarantee covers every plan. If it isn't right in your first 30 days, you get every dollar back, no questions.</p>
       </div>
 
       <div class="col-wide">
@@ -1204,17 +1195,26 @@
           <div class="pricing-card">
             <div class="pricing-type">Foundation</div>
             <div class="pricing-tagline">"For the lifter who just needs a real plan."</div>
-            <span class="pricing-commit">3-Month Minimum</span>
-            <div class="pricing-price">$49<sub>/mo</sub></div>
-            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
-            <div class="pricing-value">
-              <div class="pv-row"><span>3-month total</span><strong>$147</strong></div>
-              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$118</strong></div>
-              <div class="pv-divider"></div>
-              <div class="pv-worth">Less than $1.65/day for the full system. Equivalent retail value: $950+/mo.</div>
+            <div class="block-selector">
+              <div class="block-option">
+                <span class="block-dur">3 months</span>
+                <span class="block-total">$147</span>
+                <span class="block-save">—</span>
+              </div>
+              <div class="block-option block-best">
+                <span class="block-badge">Best value</span>
+                <span class="block-dur">6 months</span>
+                <span class="block-total">$249</span>
+                <span class="block-save">save $45</span>
+              </div>
+              <div class="block-option">
+                <span class="block-dur">12 months</span>
+                <span class="block-total">$399</span>
+                <span class="block-save">save $189</span>
+              </div>
             </div>
             <ul class="pricing-features">
-              <li>Custom 12-week strength and hypertrophy program</li>
+              <li>Custom strength and hypertrophy program</li>
               <li>Cavaliere-style nutrition guidelines: macro framework, food lists, meal templates</li>
               <li>Exercise video library and biomechanics breakdowns</li>
               <li>"The Why" educational module</li>
@@ -1228,19 +1228,28 @@
             <div class="pricing-popular">Most popular</div>
             <div class="pricing-type">Strength</div>
             <div class="pricing-tagline">"For the lifter who wants accountability and customization."</div>
-            <span class="pricing-commit">3-Month Minimum</span>
-            <div class="pricing-price">$99<sub>/mo</sub></div>
-            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
-            <div class="pricing-value">
-              <div class="pv-row"><span>3-month total</span><strong>$297</strong></div>
-              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$238</strong></div>
-              <div class="pv-divider"></div>
-              <div class="pv-worth">A single 1-on-1 PT session costs more. You get 3 months of full coaching.</div>
+            <div class="block-selector">
+              <div class="block-option">
+                <span class="block-dur">3 months</span>
+                <span class="block-total">$297</span>
+                <span class="block-save">—</span>
+              </div>
+              <div class="block-option block-best">
+                <span class="block-badge">Best value</span>
+                <span class="block-dur">6 months</span>
+                <span class="block-total">$499</span>
+                <span class="block-save">save $95</span>
+              </div>
+              <div class="block-option">
+                <span class="block-dur">12 months</span>
+                <span class="block-total">$799</span>
+                <span class="block-save">save $389</span>
+              </div>
             </div>
             <ul class="pricing-features">
               <li class="plus">Everything in Foundation</li>
               <li>Fully personalized nutrition guidelines: macros, food lists, meal structure tailored to your life</li>
-              <li>Monthly form review with personal coaching feedback</li>
+              <li>Form review with personal coaching feedback each block</li>
               <li>Bi-weekly check-ins with adjustments</li>
               <li>Adaptive programming, evolves every 4 weeks</li>
               <li>Priority chat support, 24-hour response</li>
@@ -1251,14 +1260,23 @@
           <div class="pricing-card">
             <div class="pricing-type">Complete</div>
             <div class="pricing-tagline">"For the lifter who wants a coach, not a program."</div>
-            <span class="pricing-commit">3-Month Minimum</span>
-            <div class="pricing-price">$199<sub>/mo</sub></div>
-            <div class="pricing-note-sm">Billed monthly. Cancel anytime after month 3.</div>
-            <div class="pricing-value">
-              <div class="pv-row"><span>3-month total</span><strong>$597</strong></div>
-              <div class="pv-row pv-savings"><span>Quarterly billing (save 20%)</span><strong>$478</strong></div>
-              <div class="pv-divider"></div>
-              <div class="pv-worth">Equivalent in-person coaching: $2,400+ for the same 3 months.</div>
+            <div class="block-selector">
+              <div class="block-option">
+                <span class="block-dur">3 months</span>
+                <span class="block-total">$597</span>
+                <span class="block-save">—</span>
+              </div>
+              <div class="block-option block-best">
+                <span class="block-badge">Best value</span>
+                <span class="block-dur">6 months</span>
+                <span class="block-total">$999</span>
+                <span class="block-save">save $195</span>
+              </div>
+              <div class="block-option">
+                <span class="block-dur">12 months</span>
+                <span class="block-total">$1,599</span>
+                <span class="block-save">save $789</span>
+              </div>
             </div>
             <ul class="pricing-features">
               <li class="plus">Everything in Strength</li>
@@ -1266,7 +1284,7 @@
               <li>Unlimited form review submissions</li>
               <li>Habit and lifestyle coaching (sleep, stress, recovery)</li>
               <li>WhatsApp/Voxer access for quick questions</li>
-              <li>Quarterly deeper-dive program reviews</li>
+              <li>Deeper program review every block</li>
             </ul>
             <a class="btn btn-outline" style="width:100%;" href="mailto:raoni.fitness@gmail.com?subject=Start%20Complete">Start Complete</a>
           </div>
@@ -1275,9 +1293,9 @@
 
         <div class="col">
           <div class="pricing-stack">
-            <strong>What you'd pay separately:</strong> A custom strength program from a 1-on-1 trainer ($400+). Personalized nutrition guidance and macro coaching ($250+). Monthly form review and check-ins ($300+). Equivalent retail value: $950+ per month. <strong>Your price starts at $49.</strong>
+            <strong>What a 3-month Foundation block replaces:</strong> A single custom program from a 1-on-1 trainer ($400+). Personalized nutrition guidance ($250+). Form reviews and check-ins ($300+). Equivalent retail value: $950+. <strong>Foundation 3-month block: $147.</strong>
           </div>
-          <p style="margin-top: 24px; font-size: 14px; line-height: 1.72; color: var(--text-soft);">All prices listed are monthly. Every plan starts with a 3-month minimum commitment so the work has time to actually compound. Save 20% by paying quarterly up front. Annual single-pay is available, just ask in your intake. After your first 3 months, cancel anytime. 30-day full-refund guarantee on every plan, even inside the 3-month minimum.</p>
+          <p style="margin-top: 24px; font-size: 14px; line-height: 1.72; color: var(--text-soft);">All prices are per block, paid up front. Minimum block is 3 months. Longer blocks cost less per month of coaching — the longer you commit, the bigger the discount. 30-day full-refund guarantee on every block, every plan.</p>
         </div>
       </div>
     </section>
@@ -1330,7 +1348,7 @@
         <div class="guarantee-card">
           <span class="stamp">30-Day Guarantee</span>
           <h3>If it isn't right inside the first month, you get every dollar back.</h3>
-          <p>The guarantee covers every plan: Foundation, Strength, and Complete. After your first 30 days, you're committed to the full 3-month minimum. After that, cancel anytime. No long contracts, no auto-renewals you can't get out of, no hidden fees.</p>
+          <p>The guarantee covers every plan and every block: Foundation, Strength, and Complete. If it isn't right inside the first 30 days, you get every dollar back. After that, your block runs to completion. No hidden fees, no surprise renewals — just the block you chose.</p>
         </div>
       </div>
     </section>
@@ -1348,7 +1366,7 @@
             <div class="faq-body">
               <p>Because real change requires real commitment. One month doesn't move the needle.</p>
               <p>Your body needs at least 8 to 12 weeks of consistent, progressive training to make adaptations that actually last. The first 4 weeks are baseline, learning the lifts, dialing in nutrition, and finding your training rhythm. The real progress happens in months 2 and 3.</p>
-              <p>I won't sell you a one-month gimmick because it would set you up to fail. If you don't believe in the work after your first 30 days, the refund still applies. After 3 months, you're free to cancel anytime.</p>
+              <p>I won't sell you a one-month gimmick because it would set you up to fail. If you don't believe in the work after your first 30 days, the refund still applies. After your block is done, you choose what comes next.</p>
             </div>
           </details>
 
@@ -1409,7 +1427,7 @@
           <details class="faq-item">
             <summary>How does communication actually work?</summary>
             <div class="faq-body">
-              <p>Through the coaching app and email. Foundation gets email support with a 48-hour response window. Strength gets priority chat with a 24-hour response window, plus monthly form-review video coaching. Complete adds weekly async voice or video check-ins and WhatsApp/Voxer access for quick in-the-moment questions.</p>
+              <p>Through the coaching app and email. Foundation gets email support with a 48-hour response window. Strength gets priority chat with a 24-hour response window, plus form-review video coaching each 4-week cycle. Complete adds weekly async voice or video check-ins and WhatsApp/Voxer access for quick in-the-moment questions.</p>
               <p>Async-first communication is how I keep prices affordable. You'll never wait days for a meaningful answer. You also won't be on a Zoom call every week unless you're on Complete.</p>
             </div>
           </details>
@@ -1417,7 +1435,7 @@
           <details class="faq-item">
             <summary>What happens after my first 12 weeks?</summary>
             <div class="faq-body">
-              <p>You keep going on a continuous monthly basis with a fully evolved program. Every 4 weeks the program updates. Every 12 weeks there's a deeper reassessment. Strength tests, movement re-screen, photo and measurement comparisons (if you opt in), and a fresh training block built on top of what you've earned.</p>
+              <p>You keep going with a fully evolved program. Every 4 weeks the program updates. Every 12 weeks there's a deeper reassessment — strength tests, movement re-screen, photo and measurement comparisons (if you opt in), and a fresh training block built on top of what you've earned. You can renew your block or step up to a longer one.</p>
               <p>Most clients stay 6 to 12 months. Some stay indefinitely because the program keeps evolving with them. Some leave after 6 months because they've genuinely learned how to train themselves. Which, honestly, is the win I'm working toward.</p>
             </div>
           </details>
@@ -1425,8 +1443,8 @@
           <details class="faq-item">
             <summary>Can I cancel? Are there contracts?</summary>
             <div class="faq-body">
-              <p>There's a 3-month minimum commitment when you start any plan. After that, it's month to month. Cancel anytime, directly from your account. No long-term contracts, no hidden fees, no auto-renewals you can't escape.</p>
-              <p>The 30-day refund guarantee covers your first month entirely, so even within the 3-month minimum, you have a full refund window if it isn't right.</p>
+              <p>Coaching is sold in blocks — 3, 6, or 12 months — paid up front. The minimum starting block is 3 months. After a block ends, you choose whether to renew (and which block to pick next). No auto-renewals, no surprise charges, no hidden fees.</p>
+              <p>The 30-day refund guarantee covers every block, so even inside your first block, you have a full refund window if it isn't right.</p>
             </div>
           </details>
 
@@ -1435,7 +1453,7 @@
             <div class="faq-body">
               <p>Because the cost structure is different, not because the coaching is.</p>
               <p>Traditional personal training is expensive because of overhead. Gym rent, equipment, drive time between clients, scheduling friction, and the simple math that one trainer can only see 5 to 8 clients a day in person. Online coaching strips all of that out. The expertise is the same. The delivery model is built for scale.</p>
-              <p>What you don't get vs. 1-on-1 in-person: a coach standing next to you while you lift. What you do get: a custom program, evidence-based nutrition guidelines, biomechanics education, and ongoing coaching access from a credentialed coach. For less than one in-person session per month.</p>
+              <p>What you don't get vs. 1-on-1 in-person: a coach standing next to you while you lift. What you do get: a custom program, evidence-based nutrition guidelines, biomechanics education, and ongoing coaching access from a credentialed coach — for less than one in-person session.</p>
             </div>
           </details>
 
@@ -1464,13 +1482,13 @@
       <div class="final-inner">
         <span class="label label-light">Ready to start</span>
         <h2 class="h2">Pick your plan. Get your program. Start training.</h2>
-        <p class="body-text body-text-light" style="text-align:center;">Three plans, all with a 3-month minimum commitment and a 30-day full-refund guarantee. The first program lands in your account within 72 hours of your intake.</p>
+        <p class="body-text body-text-light" style="text-align:center;">Three plans, three block lengths. Start with 3 months, go longer for a better deal. 30-day full-refund guarantee on every block. The first program lands in your account within 72 hours of your intake.</p>
         <ul class="final-checks">
           <li>Custom strength and hypertrophy programming</li>
           <li>Cavaliere-style nutrition guidelines built into every plan</li>
           <li>Biomechanics education built in</li>
           <li>30-day full-refund guarantee on every plan</li>
-          <li>3-month minimum, then cancel anytime</li>
+          <li>Blocks of 3, 6, or 12 months — longer = better deal</li>
         </ul>
         <div class="final-cta-actions">
           <a class="btn btn-primary" href="#pricing">See the Programs</a>
